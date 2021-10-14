@@ -9,19 +9,21 @@ namespace _42finance.CrossCutting.DI
 {
     public static class ApiDiConfig
     {
-        public static void AddDependencyInjection(this IServiceCollection services, bool forWorkers = false, bool ignoreIdentity = false)
+        public static void AddDependencyInjection(this IServiceCollection services, bool isMock = false)
         {
-            ///ConfigureDomainServices(services, forWorkers);
+            ConfigureServices(services, isMock);
         }
 
-		private static void ConfigureServices(IServiceCollection services, bool forWorkers)
+		private static void ConfigureServices(IServiceCollection services, bool isMock)
 		{
-			if (!forWorkers)
+			if (isMock)
 			{
-				//services.AddTransient<AutenticacaoSsoService>();
+				//dadosMocado
 			}
-
-			//services.AddTransient<SafeEfDbService>();
+			else
+			{
+				//dadosreais
+			}
 		}
 	}
 }

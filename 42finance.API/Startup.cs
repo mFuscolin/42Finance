@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Globalization;
 using Microsoft.OpenApi.Models;
+using _42finance.CrossCutting.DI;
 
 namespace _42finance.API
 {
@@ -31,6 +32,8 @@ namespace _42finance.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "42finance.API", Version = "v1" });
             });
+            
+            services.AddDependencyInjection(true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
