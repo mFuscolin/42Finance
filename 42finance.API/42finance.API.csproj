@@ -11,6 +11,7 @@
 
   <ItemGroup>
   <ProjectReference Include="..\42finance.CrossCutting\42finance.CrossCutting.csproj" />
+  <ProjectReference Include="..\42finance.Infra\42finance.Infra.csproj" />
 </ItemGroup>
 
 </Project>

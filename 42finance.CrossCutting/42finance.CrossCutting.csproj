@@ -6,11 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mapping\" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <ProjectReference Include="..\42finance.Application\42finance.Application.csproj" />
+    <ProjectReference Include="..\42finance.Data\42finance.Data.csproj" />
+    <ProjectReference Include="..\42finance.Domain\42finance.Domain.csproj" />
   </ItemGroup>
 
 </Project>

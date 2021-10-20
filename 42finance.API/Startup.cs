@@ -1,16 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Globalization;
 using Microsoft.OpenApi.Models;
 using _42finance.CrossCutting.DI;
+using _42finance.CrossCutting.Mapping;
 
 namespace _42finance.API
 {
@@ -26,14 +21,14 @@ namespace _42finance.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDependencyInjection(true);
+            services.AddAutoMapperConfiguration();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "42finance.API", Version = "v1" });
-            });
-            
-            services.AddDependencyInjection(true);
+            });                        
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
