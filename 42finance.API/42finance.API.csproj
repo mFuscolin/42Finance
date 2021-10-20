@@ -9,4 +9,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+  <ProjectReference Include="..\42finance.CrossCutting\42finance.CrossCutting.csproj" />
+  <ProjectReference Include="..\42finance.Infra\42finance.Infra.csproj" />
+</ItemGroup>
+
 </Project>
