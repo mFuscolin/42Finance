@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using _42finance.CrossCutting.DI;
 using _42finance.CrossCutting.Mapping;
+using System.Globalization;
 
 namespace _42finance.API
 {
@@ -51,6 +52,11 @@ namespace _42finance.API
             {
                 endpoints.MapControllers();
             });
+
+
+            var cultureInfo = new CultureInfo("pt-BR");
+            CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+            CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
         }
     }
 }
