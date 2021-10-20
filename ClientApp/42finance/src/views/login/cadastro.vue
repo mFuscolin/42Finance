@@ -19,10 +19,18 @@
           <v-col cols="10 py-0">
             <h1>Bem-vindo!</h1>
 
-            <p>Faça login em sua conta</p>
+            <p>Crie sua conta e aproveite!</p>
 
             <v-text-field
-              label="Usuário"
+              label="Nome do Usuário"
+              :rules="rules"
+              outlined
+              class="text-body-2 white"
+              dense
+            ></v-text-field>
+
+            <v-text-field
+              label="Email"
               :rules="rules"
               outlined
               class="text-body-2 white"
@@ -41,45 +49,21 @@
             ></v-text-field>
           </v-col>
 
-          <v-row>
-            <v-col cols="5" class="ml-11 pb-0">
-              <v-checkbox
-                v-model="lembrar"
-                :label="'Lembrar'"
-                class="mt-0 pt-0"
-                color="info"
-              ></v-checkbox>
-            </v-col>
-            <v-col cols="5" class="pb-0">
-              <a
-                target="_blank"
-                href="https://pt.org.br/wp-content/uploads/2020/07/whatsapp-image-2020-07-07-at-20-54-17-780x440.jpeg"
-                @click.stop
-              >
-                Esqueci a senha
-              </a>
-            </v-col>
-          </v-row>
-
-          <v-col cols="10">
+          <v-col cols="10" class="pt-0">
             <v-btn
               color="blue"
               class="white--text font-weight-bold"
               block
-              @click="$router.push('/home')"
-              >Entrar</v-btn
+              @click="$router.push('/')"
+              >Criar</v-btn
             >
           </v-col>
 
           <v-col cols="10" class="py-0">
             <p class="text-left ma-0">
-              Ainda não é usuário?
-              <a
-                target="_blank"
-                @click="$router.push('/cadastro')"
-                class="pl-7"
-              >
-                Cadastre-se aqui
+              Já tem uma conta?
+              <a target="_blank" @click="$router.push('/')" class="pl-13">
+                Faça login aqui!
               </a>
             </p>
           </v-col>
