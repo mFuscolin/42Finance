@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _42finance.Application.ApplicationServices.Email
+namespace _42finance.Domain.Repositories
 {
-    public class EnvioEmailApplicationService
+    class IAutenticacaoRepository
     {
     }
 }

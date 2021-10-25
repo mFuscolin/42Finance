@@ -19,11 +19,11 @@ namespace _42finance.CrossCutting.DI
         {
             if (isMock)
             {
-                services.AddTransient<IEnvioEmailService, EnvioEmailServiceMock>();
+                services.AddTransient<IEnvioEmailRepository, EnvioEmailServiceMock>();
             }
             else
             {
-                services.AddTransient<IEnvioEmailService, EnvioEmailService>();
+                services.AddTransient<IEnvioEmailRepository, EnvioEmailService>();
                 services.AddTransient<DapperDbService>();
                 services.AddTransient<IDbService, DapperDbServiceBase>();
             }         
