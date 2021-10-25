@@ -1,15 +1,15 @@
 <template>
   <v-app
-    ><v-main class="grey lighten-5">
-      <v-row style="height: 103vh" justify="center" align="center">
-        <v-card
-          rounded="lg"
-          min-height="500px"
-          class="white"
-          elevation="2"
-          width="400px"
-          align="center"
-        >
+    ><v-main>
+      <v-row style="height: 103vh" align="center" class="justify-center">
+        <v-card elevation="0" :height="height" class="d-flex align-end">
+          <img
+            src="@/assets/img-cadastro.jpg"
+            alt="Logo 42 Finance"
+            :height="height"
+          />
+        </v-card>
+        <v-card class="mx-15" width="400px" align="center">
           <v-col cols="10">
             <v-row align="center" justify="center" class="pt-5 pb-3">
               <img src="@/assets/logo.png" alt="Logo 42 Finance" height="40" />
@@ -60,9 +60,9 @@
           </v-col>
 
           <v-col cols="10" class="py-0">
-            <p class="text-left ma-0">
+            <p class="ma-0">
               Já tem uma conta?
-              <a target="_blank" @click="$router.push('/')" class="pl-13">
+              <a target="_blank" @click="$router.push('/')">
                 Faça login aqui!
               </a>
             </p>
@@ -104,7 +104,7 @@ export default {
       lembrar: false,
       rules: [
         (value) => !!value || "Campo Obrigatório!.",
-        (value) => (value && value.length >= 3) || "Min 3 characters",
+        (value) => (value && value.length >= 3) || "Min 3 caracteres",
       ],
       socials: [
         {
@@ -125,6 +125,22 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    height() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return 150;
+        case "sm":
+          return 150;
+        case "md":
+          return 400;
+        case "lg":
+          return 400;
+        case "xl":
+          return 600;
+      }
+    },
   },
 };
 </script>

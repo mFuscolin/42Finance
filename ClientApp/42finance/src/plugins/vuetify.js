@@ -19,4 +19,13 @@ export default new Vuetify({
   icons: {
     iconfont: 'mdi' || 'md' || 'fa4' || 'fa'
   },
+  theme: {
+    themes: {
+      light: {
+        cinzaPrimario: '#fff',
+        cinzaSecundario: '#23282c',
+        cinzaTerciario: '#50555A'
+      },
+    },
+  },
 })
