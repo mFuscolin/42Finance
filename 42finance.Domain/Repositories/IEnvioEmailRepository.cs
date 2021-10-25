@@ -2,7 +2,7 @@
 
 namespace _42finance.Domain.Interfaces.Services
 {
-    public interface IEnvioEmailService
+    public interface IEnvioEmailRepository
     {
 
         public void Enviar(EnvioEmail envioEmail);
