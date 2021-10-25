@@ -7,7 +7,7 @@
     <span v-else>
       <core-toolbar></core-toolbar>
       <core-sidebar />
-      <v-main class="grey lighten-4">
+      <v-main style="min-height: 100vh" class="grey lighten-4">
         <router-view />
       </v-main>
     </span>

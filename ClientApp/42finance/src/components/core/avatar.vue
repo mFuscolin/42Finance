@@ -6,12 +6,7 @@
           <span v-if="!user.avatar" class="white--text text-h6">{{
             user.iniciais
           }}</span>
-          <img
-            aspect-ratio="1"
-            v-else
-            alt="Avatar"
-            src="@/assets/avatar.jpeg"
-          />
+          <img aspect-ratio="1" v-else alt="Avatar" src="@/assets/raul.jpg" />
         </v-avatar>
       </v-btn>
     </template>
@@ -22,12 +17,7 @@
             <span v-if="!user.avatar" class="white--text text-h5">{{
               user.iniciais
             }}</span>
-            <img
-              aspect-ratio="1"
-              v-else
-              alt="Avatar"
-              src="@/assets/avatar.jpeg"
-            />
+            <img aspect-ratio="1" v-else alt="Avatar" src="@/assets/raul.jpg" />
           </v-avatar>
           <h3 class="font-weight-medium">{{ user.nome }}</h3>
           <p class="text-caption mt-1">
@@ -73,9 +63,9 @@ export default {
   data: () => ({
     user: {
       avatar: true,
-      iniciais: "EL",
-      nome: "Erick Lacerda",
-      email: "eck.lacerda@gmail.com",
+      iniciais: "RS",
+      nome: "Raul Seixas",
+      email: "raulzito@gmail.com",
     },
   }),
 };

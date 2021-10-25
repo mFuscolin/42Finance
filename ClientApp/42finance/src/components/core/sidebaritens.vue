@@ -34,7 +34,7 @@ export default {
     items: [
       {
         icon: "mdi-home",
-        to: "/pessoa",
+        to: "/Home",
         title: "Home",
       },
       {

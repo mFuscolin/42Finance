@@ -34,19 +34,24 @@
         <v-divider></v-divider>
 
         <v-list>
-          <v-list-item class="blue lighten-5">
+          <v-list-item
+            v-for="item in items"
+            :key="item.title"
+            :class="item.class"
+          >
             <v-list-item-avatar>
-              <img src="@/assets/avatar.jpeg" alt="avatar" />
+              <img src="@/assets/raul.jpg" alt="avatar" />
             </v-list-item-avatar>
 
             <v-list-item-content>
-              <v-list-item-title>Compra mercadinho</v-list-item-title>
-              <v-list-item-subtitle>R$ 20,00</v-list-item-subtitle>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+              <v-list-item-subtitle>{{ item.subtitle }}</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
         </v-list>
 
         <v-divider></v-divider>
+
         <v-col cols="12">
           <v-btn
             color="blue accent-4"
@@ -64,10 +69,22 @@
 <script>
 export default {
   data: () => ({
-    fav: true,
     menu: false,
-    messages: 1,
-    hints: true,
+    messages: 2,
+    items: [
+      {
+        avatar: "@/assets/raul.jpg",
+        title: "Compra Mercadinho",
+        subtitle: "R$ 20,00",
+        class: "red lighten-5 my-1",
+      },
+      {
+        avatar: "@/assets/raul.jpg",
+        title: "Pagamento Cash-Back",
+        subtitle: "R$ 32,60",
+        class: "green lighten-5 my-1",
+      },
+    ],
   }),
 };
 </script>
